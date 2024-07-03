@@ -215,6 +215,11 @@ main .container .image img {
 }
 /* Konten 2 End */
 
+/* disqus */
+.disqus_thread {
+  margin: 0 90%;
+}
+
 /* Footer Start */
 footer {
   background: linear-gradient(to right, #5670d0, #833ab4);
