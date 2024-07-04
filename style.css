@@ -16,6 +16,26 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+main .hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+main .hidden.show {
+  /* Ensure the selector targets elements with both classes */
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
 /* Navigation Bar Start */
 
 .navbar {
@@ -191,6 +211,25 @@ main .container .image img {
   gap: 2rem;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about .box .box1::after,
+.about .box .box2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Ubah transparansi sesuai kebutuhan */
+  pointer-events: none; /* Menyembunyikan elemen dari interaksi */
 }
 
 .about .box .box1 img,
