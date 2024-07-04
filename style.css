@@ -224,6 +224,12 @@ main .container .image img {
   margin: 0 90%;
 }
 
+#disqus_thread {
+  margin: 2rem auto;
+  padding: 0 2rem; /* Menambahkan padding di kiri dan kanan */
+  width: 80%; /* Menentukan lebar yang sesuai */
+}
+
 /* Footer Start */
 footer {
   background: linear-gradient(to right, #5670d0, #833ab4);
