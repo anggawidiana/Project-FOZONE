@@ -125,6 +125,10 @@ main .container .desk p {
   color: #555;
 }
 
+main .container .desk p span {
+  color: #5670d0;
+}
+
 main .container .desk a {
   background: linear-gradient(to right, #5670d0, #83a2f5);
   border: none;
