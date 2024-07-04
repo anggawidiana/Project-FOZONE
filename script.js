@@ -9,3 +9,9 @@ navbarLinks.forEach((link) => {
     this.classList.add("active");
   });
 });
+
+document.addEventListener("contextmenu", function (e) {
+  if (e.target.tagName === "IMG") {
+    e.preventDefault();
+  }
+});

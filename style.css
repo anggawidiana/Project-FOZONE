@@ -178,6 +178,12 @@ main .container .image img {
   flex-wrap: wrap;
 }
 
+.about .box img {
+  pointer-events: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
 .about .box .box1,
 .about .box .box2 {
   display: flex;
