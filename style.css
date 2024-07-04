@@ -178,12 +178,6 @@ main .container .image img {
   flex-wrap: wrap;
 }
 
-.about .box img {
-  pointer-events: none;
-  user-drag: none;
-  -webkit-user-drag: none;
-}
-
 .about .box .box1,
 .about .box .box2 {
   display: flex;
@@ -204,6 +198,11 @@ main .container .image img {
   width: 200px;
   border-radius: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .about .box .box1 p,
