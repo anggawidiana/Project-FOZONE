@@ -1,0 +1,39 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.foto {
+    background-color: aqua;
+}
+
+.foto1 {
+    width: 100px;
+    height: 100px;
+
+}
+
+.foto2 {
+    width: 100px;
+    height: 100px;
+}
+
+.foto3 {
+    width: 100px;
+    height: 100px;
+    
+}
+
+.foto4 {
+    width: 100px;
+    height: 100px;
+    
+}
+
+
+.foto7 {
+    width: 100px;
+    height: 100px;
+}
