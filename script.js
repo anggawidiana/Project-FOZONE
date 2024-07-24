@@ -1,4 +1,5 @@
 // script.js
+
 // Navbar Start
 const navbarLinks = document.querySelectorAll(".navbar a");
 
@@ -10,20 +11,19 @@ navbarLinks.forEach((link) => {
     this.classList.add("active");
   });
 });
-//Navbar End
+// Navbar End
 
-//Klik Kanan
+// Klik Kanan
 document.addEventListener("contextmenu", function (e) {
   if (e.target.tagName === "IMG" && e.target.closest(".about")) {
     e.preventDefault();
   }
 });
-//Klik Kanan
+// Klik Kanan
 
-//scroll animation
+// Scroll Animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     } else {
@@ -34,3 +34,60 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+// Form submission with loading spinner and success alert
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbyTEOYswkhbarAtTH4VVWJ3v34JQJzSY9I-n-0cuOjtaoEyZUE9OGHF0tFnBcBs-tT-rA/exec";
+const form = document.forms["fozone-contact-form"];
+const submitButton = form.querySelector("button[type=submit]");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Add loading spinner
+  submitButton.disabled = true;
+  submitButton.classList.add("loading");
+  submitButton.innerHTML = 'Sending... <div class="loading-spinner"></div>';
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      // Form submission successful
+      console.log("Success!", response);
+      alert("Form successfully submitted!");
+      form.reset();
+    })
+    .catch((error) => {
+      // Form submission failed
+      console.error("Error!", error.message);
+      alert("There was an error submitting the form. Please try again.");
+    })
+    .finally(() => {
+      // Remove loading spinner
+      submitButton.disabled = false;
+      submitButton.classList.remove("loading");
+      submitButton.innerHTML = "Send";
+    });
+});
+// formsubmision
+document.addEventListener("DOMContentLoaded", () => {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbyTEOYswkhbarAtTH4VVWJ3v34JQJzSY9I-n-0cuOjtaoEyZUE9OGHF0tFnBcBs-tT-rA/exec";
+  const form = document.forms["fozone-contact-form"];
+  const submitButton = document.getElementById("submit-button");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    submitButton.classList.add("loading");
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => {
+        submitButton.classList.remove("loading");
+        alert("Form successfully submitted!");
+        form.reset();
+      })
+      .catch((error) => {
+        submitButton.classList.remove("loading");
+        alert("There was an error submitting the form. Please try again.");
+        console.error("Error!", error.message);
+      });
+  });
+});
