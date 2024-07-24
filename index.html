@@ -143,7 +143,12 @@
               required
             ></textarea>
           </div>
-          <button type="submit">Send</button>
+          <button
+            type="submit"
+            id="submit-button"
+          >
+            Send
+          </button>
         </form>
       </section>
     </main>
@@ -196,17 +201,5 @@
     <!-- Footer End -->
 
     <script src="script.js"></script>
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbyTEOYswkhbarAtTH4VVWJ3v34JQJzSY9I-n-0cuOjtaoEyZUE9OGHF0tFnBcBs-tT-rA/exec";
-      const form = document.forms["fozone-contact-form"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
   </body>
 </html>
