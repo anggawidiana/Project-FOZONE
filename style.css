@@ -190,6 +190,7 @@ main .container .image img {
   text-align: center;
   padding: 2rem;
   color: #333;
+  font-size: 32px;
 }
 
 .about .box {
@@ -264,7 +265,6 @@ main .container .image img {
 }
 /* Konten 2 End */
 
-/* Konten 3 Start */
 /* Konten 3 Start */
 .content-3 {
   padding: 2rem;
@@ -373,8 +373,16 @@ main .container .image img {
     width: 90%;
   }
 
+  .contact-form .form-group label {
+    font-size: 16px;
+  }
+
   .contact-form button {
     width: 70%;
+  }
+
+  .content-3 h1 {
+    font-size: 24px;
   }
 }
 
@@ -472,6 +480,7 @@ footer .footer-logo img:hover {
   /* Konten 1 Start */
   .navbar {
     padding: 1rem;
+    gap: 2rem;
   }
 
   .navbar a {
@@ -505,7 +514,7 @@ footer .footer-logo img:hover {
 
   main .container .desk p {
     font-size: smaller;
-    width: 120%;
+    width: 100%;
     align-self: center;
     margin-top: -1rem;
     text-align: center;
@@ -527,7 +536,7 @@ footer .footer-logo img:hover {
 
   /* Konten 2 Start */
   .about {
-    width: 70%;
+    width: 80%;
   }
 
   .about h1 {
@@ -543,7 +552,7 @@ footer .footer-logo img:hover {
   .about .box .box1,
   .about .box .box2 {
     width: 80%;
-    height: 250px;
+    height: 300px;
     gap: 1rem;
   }
 
@@ -562,6 +571,23 @@ footer .footer-logo img:hover {
   }
   /* Konten 2 End */
 
+  /* Konten 3 Start */
+  .contact-form {
+    width: 90%;
+  }
+
+  .contact-form .form-group label {
+    font-size: 16px;
+  }
+
+  .contact-form button {
+    width: 70%;
+  }
+
+  .content-3 h1 {
+    font-size: 24px;
+  }
+  /* Konten 3 End */
   footer {
     font-size: 90%;
   }
@@ -573,6 +599,10 @@ footer .footer-logo img:hover {
 /* responsive mobile 1 */
 /* responsive mobile 2 */
 @media (max-width: 400px) {
+  .navbar {
+    gap: 1.5rem;
+  }
+
   main .container {
     display: flex;
     justify-content: center;
@@ -587,8 +617,32 @@ footer .footer-logo img:hover {
   .about .box .box1,
   .about .box .box2 {
     width: 90%;
-    height: 250px;
+    height: 300px;
     gap: 1rem;
   }
 }
+
+/* Konten 3 Start */
+.content-3 {
+  width: 85%;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form .form-group label,
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  font-size: 14px;
+}
+
+.contact-form button {
+  width: 70%;
+}
+
+.content-3 h1 {
+  font-size: 24px;
+}
+/* Konten 3 End */
 /* responsive mobile 2 */
