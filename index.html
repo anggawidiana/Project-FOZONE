@@ -21,17 +21,60 @@
       crossorigin="anonymous"
     ></script>
     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <!-- Navigation Bar Start -->
-
     <nav class="navbar">
-      <a href="#home">Home</a>
-      <a href="#aboutus">About Us</a>
-      <a href="#contactus">Contact Us</a>
+      <input
+        type="checkbox"
+        id="check"
+      />
+      <label
+        for="check"
+        class="icons"
+      >
+        <i
+          class="bx bx-menu-alt-right"
+          id="menu-icon"
+        ></i>
+        <i
+          class="bx bx-x"
+          id="close-icon"
+        ></i>
+      </label>
+      <ul class="navbar-nav">
+        <li>
+          <a
+            href="#home"
+            style="--i: 0"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#aboutus"
+            style="--i: 1"
+          >
+            About Us
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contactus"
+            style="--i: 2"
+          >
+            Contact Us
+          </a>
+        </li>
+      </ul>
     </nav>
 
     <!-- Navigation Bar End -->
@@ -43,21 +86,25 @@
         id="home"
       >
         <div class="desk">
-          <h1>Memories of <span>FOZONE</span></h1>
+          <h1>
+            Memories of
+            <span>FOZONE</span>
+          </h1>
           <p>
             Website ini adalah galeri foto kenangan saat SMA, tempat menyimpan
             momen tak terlupakan bersama teman dan guru. Nikmati kembali
             keceriaan dan kebahagiaan masa lalu.
-            <span
-              >Jangan lupa untuk mengklik tombol "Memories" di bawah ini!</span
-            >
+            <span>
+              Jangan lupa untuk mengklik tombol "Memories" di bawah ini!
+            </span>
           </p>
           <br />
           <a
             href="galery/index.html"
             target="_blank"
-            >Memories</a
           >
+            Memories
+          </a>
         </div>
         <div class="image">
           <img
@@ -88,8 +135,9 @@
               target="_blank"
               href="https://www.instagram.com/g.anggaa_/"
               class="insta"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
           </div>
           <div class="box2">
             <img
@@ -101,8 +149,9 @@
               target="_blank"
               href="https://www.instagram.com/gungdepandu/"
               class="insta"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
           </div>
         </div>
       </section>
@@ -175,26 +224,30 @@
           <a
             href="https://instagram.com/g.anggaa_"
             target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
           <a
             href="https://www.facebook.com/agung.angga.794"
             target="_blank"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
         </div>
         <div class="creator">
           <p>Agung Pandu</p>
           <a
             href="https://instagram.com/gungdepandu"
             target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
           <a
             href="https://facebook.com/creator2"
             target="_blank"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
         </div>
       </div>
       <div class="copyright">
@@ -204,5 +257,32 @@
     <!-- Footer End -->
 
     <script src="script.js"></script>
+    // formsubmision
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbyTEOYswkhbarAtTH4VVWJ3v34JQJzSY9I-n-0cuOjtaoEyZUE9OGHF0tFnBcBs-tT-rA/exec";
+        const form = document.forms["fozone-contact-form"];
+        const submitButton = document.getElementById("submit-button");
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          submitButton.classList.add("loading");
+          fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then((response) => {
+              submitButton.classList.remove("loading");
+              alert("Form successfully submitted!");
+              form.reset();
+            })
+            .catch((error) => {
+              submitButton.classList.remove("loading");
+              alert(
+                "There was an error submitting the form. Please try again."
+              );
+              console.error("Error!", error.message);
+            });
+        });
+      });
+    </script>
   </body>
 </html>

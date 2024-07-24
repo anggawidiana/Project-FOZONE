@@ -50,23 +50,40 @@ main .hidden.show {
   padding: 1rem;
   width: 80%;
   position: sticky;
-  top: 1rem;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
 }
 
-.navbar a {
-  color: white;
-  padding: 0.5rem;
+.navbar #check {
+  display: none;
+}
+
+.icons {
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 5%;
+}
+
+.navbar .navbar-nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 4rem;
+  padding: 0.5rem;
+}
+
+.navbar .navbar-nav li a {
+  color: white;
   font-size: 16px;
   position: relative;
 }
 
-.navbar a::after {
+.navbar .navbar-nav li a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -79,14 +96,14 @@ main .hidden.show {
   transition: transform 0.3s linear;
 }
 
-.navbar a:hover::after {
+.navbar .navbar-nav li a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-.navbar a:hover::after,
-.navbar a:focus::after,
-.navbar a.active::after {
+.navbar .navbar-nav li:hover::after,
+.navbar .navbar-nav li:focus::after,
+.navbar .navbar-nav li.active::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -481,12 +498,56 @@ footer .footer-logo img:hover {
   .navbar {
     padding: 1rem;
     gap: 2rem;
+    height: 6rem;
   }
 
-  .navbar a {
-    padding: 0.5rem;
-    font-size: 14px;
+  #check:checked ~ .icons #menu-icon {
+    display: none;
   }
+
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  .icons {
+    display: inline-flex;
+  }
+
+  .navbar .navbar-nav {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    display: block;
+    opacity: 0;
+    margin: 1rem auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    overflow: hidden;
+    transform: translateY(-50px);
+  }
+
+  #check:checked ~ .navbar-nav {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(0.15s * var(--i));
+  }
+
+  .navbar .navbar-nav li {
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+
+  /* Navigation Bar End */
 
   main .container {
     display: flex;

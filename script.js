@@ -68,26 +68,3 @@ form.addEventListener("submit", (e) => {
       submitButton.innerHTML = "Send";
     });
 });
-// formsubmision
-document.addEventListener("DOMContentLoaded", () => {
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbyTEOYswkhbarAtTH4VVWJ3v34JQJzSY9I-n-0cuOjtaoEyZUE9OGHF0tFnBcBs-tT-rA/exec";
-  const form = document.forms["fozone-contact-form"];
-  const submitButton = document.getElementById("submit-button");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    submitButton.classList.add("loading");
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => {
-        submitButton.classList.remove("loading");
-        alert("Form successfully submitted!");
-        form.reset();
-      })
-      .catch((error) => {
-        submitButton.classList.remove("loading");
-        alert("There was an error submitting the form. Please try again.");
-        console.error("Error!", error.message);
-      });
-  });
-});
