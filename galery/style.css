@@ -44,12 +44,13 @@
 
   }
 }
-@media (max-width: 480px)
+@media screen (max-width: 476px)
 {
   .container {
     columns: 1;
 
   }
 }
+
 
 
