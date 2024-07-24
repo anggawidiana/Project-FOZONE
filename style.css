@@ -43,7 +43,7 @@ main .hidden.show {
   justify-content: center;
   align-items: center;
   margin: 1rem auto;
-  gap: 2rem;
+  gap: 4rem;
   background: linear-gradient(to right, #5670d0, #c3d3ff);
   color: black;
   border-radius: 2rem;
@@ -62,7 +62,7 @@ main .hidden.show {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  font-size: 20px;
+  font-size: 16px;
   position: relative;
 }
 
@@ -183,6 +183,7 @@ main .container .image img {
   padding: 2rem;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
 .about h1 {
@@ -263,18 +264,84 @@ main .container .image img {
 }
 /* Konten 2 End */
 
-/* disqus */
-.disqus_thread {
-  margin: 0 90%;
+/* Konten 3 Start */
+.content-3 {
+  padding: 2rem;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 2rem auto;
 }
 
-#disqus_thread {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem; /* Padding kiri */
-  padding-right: 1rem; /* Padding kanan */
-  width: calc(100% - 4rem); /* Mengurangi total padding dari lebar total */
+.content-3 h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #5670d0;
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(to right, #5670d0, #83a2f5);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: center;
+  width: 20%;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(to right, #83a2f5, #5670d0);
+}
+
+/* Responsive adjustments for form */
+@media (max-width: 500px) {
+  .contact-form {
+    width: 90%;
+  }
+
+  .contact-form button {
+    width: 70%;
+  }
+}
+/* Konten 3 End */
 
 /* Footer Start */
 footer {

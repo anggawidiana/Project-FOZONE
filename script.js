@@ -1,4 +1,5 @@
 // script.js
+
 // Navbar Start
 const navbarLinks = document.querySelectorAll(".navbar a");
 
@@ -10,20 +11,19 @@ navbarLinks.forEach((link) => {
     this.classList.add("active");
   });
 });
-//Navbar End
+// Navbar End
 
-//Klik Kanan
+// Klik Kanan
 document.addEventListener("contextmenu", function (e) {
   if (e.target.tagName === "IMG" && e.target.closest(".about")) {
     e.preventDefault();
   }
 });
-//Klik Kanan
+// Klik Kanan
 
-//scroll animation
+// Scroll Animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     } else {
