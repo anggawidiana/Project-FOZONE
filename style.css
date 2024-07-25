@@ -536,7 +536,7 @@ footer .footer-logo img:hover {
     width: 100%;
     height: auto;
     background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(50px);
     display: block;
     opacity: 0;
     margin: 1rem auto;
