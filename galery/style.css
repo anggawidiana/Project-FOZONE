@@ -104,10 +104,15 @@ body {
 
 #preloader {
   background: #5670d0 url("loader.gif") no-repeat center center;
-  background-size: 15%;
+  background-size: 10%; /* Sesuaikan ukuran gambar loader */
   height: 100vh;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 1000; /* Pastikan preloader berada di atas semua konten */
   top: 0;
+  left: 0; /* Pastikan preloader menutupi seluruh layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease; /* Tambahkan transisi untuk efek fade-out */
 }

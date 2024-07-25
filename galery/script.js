@@ -1,15 +1,14 @@
-// const loader = document.getElementById("preloader");
-// window.addEventListener("load", function () {
-//   loader.style.display = "none";
-//   setTimeout(function () {
-//     preload.classList.add("preload-finish");
-//   }, 1000);
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  const loader = document.getElementById("preloader");
 
-window.addEventListener("load", () => {
-  const preload = document.getElementById("preloader");
-  preload.style.display = "none";
-  setTimeout(function () {
-    preload.classList.add("preload-finish");
-  }, 5000);
+  // Simpan dalam variabel dan tambahkan event listener
+  window.addEventListener("load", function () {
+    // Delay untuk menunggu gambar dan elemen lainnya dimuat
+    setTimeout(function () {
+      loader.style.opacity = 0; // Tambahkan efek fade-out
+      setTimeout(function () {
+        loader.style.display = "none"; // Sembunyikan preloader setelah efek fade-out
+      }, 500); // Waktu delay untuk efek fade-out
+    }, 3000); // Waktu tampil preloader
+  });
 });
