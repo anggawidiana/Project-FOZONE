@@ -386,9 +386,9 @@ main .container .image img {
 }
 
 #disqus_thread {
-  width: 80%; /* Sesuaikan lebar sesuai kebutuhan Anda */
+  width: 90%; /* Sesuaikan lebar sesuai kebutuhan Anda */
   margin: 0 auto; /* Memusatkan elemen secara horizontal */
-  padding: 20px; /* Tambahkan padding jika diperlukan */
+  padding: 2rem; /* Tambahkan padding jika diperlukan */
   background-color: #f9f9f9; /* Opsional: tambahkan warna latar belakang */
   border-radius: 5px; /* Opsional: tambahkan border radius */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional: tambahkan shadow */
