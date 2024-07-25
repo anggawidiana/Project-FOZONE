@@ -47,7 +47,7 @@ form.addEventListener("submit", (e) => {
   // Add loading spinner
   submitButton.disabled = true;
   submitButton.classList.add("loading");
-  submitButton.innerHTML = 'Sending... <div class="loading-spinner"></div>';
+  submitButton.innerHTML = ' <div class="loading-spinner"></div>';
 
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
@@ -67,4 +67,14 @@ form.addEventListener("submit", (e) => {
       submitButton.classList.remove("loading");
       submitButton.innerHTML = "Send";
     });
+});
+
+const navLinks = document.querySelectorAll(".navbar-nav li a");
+
+// Add a click event listener to each link
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    // Uncheck the checkbox to close the menu
+    document.getElementById("check").checked = false;
+  });
 });
