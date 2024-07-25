@@ -69,6 +69,36 @@ main .hidden.show {
   right: 5%;
 }
 
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.icons #menu-icon,
+.icons #close-icon {
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#check:checked ~ .icons #menu-icon {
+  transform: rotate(45deg) scale(0);
+  opacity: 0;
+}
+
+#check:checked ~ .icons #close-icon {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+
+.icons #close-icon {
+  transform: rotate(-45deg) scale(0);
+  opacity: 0;
+}
+
 .navbar .navbar-nav {
   display: flex;
   justify-content: center;
@@ -504,23 +534,10 @@ footer .footer-logo img:hover {
 /* Footer End */
 /* responsive mobile 1 */
 @media (max-width: 500px) {
-  /* Konten 1 Start */
   .navbar {
     padding: 1rem;
     gap: 2rem;
     height: 5rem;
-  }
-
-  #check:checked ~ .icons #menu-icon {
-    display: none;
-  }
-
-  #check:checked ~ .icons #close-icon {
-    display: block;
-  }
-
-  .icons #close-icon {
-    display: none;
   }
 
   .icons {
@@ -535,13 +552,13 @@ footer .footer-logo img:hover {
     left: 0;
     width: 100%;
     height: auto;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(100px);
+    background: rgba(88, 114, 209, 0.5);
+    backdrop-filter: blur(50px);
     display: block;
     opacity: 0;
     margin: 1rem auto;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     overflow: hidden;
     transform: translateY(-50px);
   }
