@@ -386,7 +386,7 @@ main .container .image img {
 }
 
 /* disqus */
-.disqus_thread {
+#disqus_thread {
   margin: 0 90%;
 }
 
