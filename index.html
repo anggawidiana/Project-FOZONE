@@ -206,6 +206,38 @@
     </main>
 
     <!-- Konten 3 End -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="disqus_thread"></div>
+    <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+      /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+      (function () {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://memories-of-fozone.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <br />
+    <br />
+    <br />
+    <br />
     <!-- Footer Start -->
     <footer>
       <div class="footer-logo">
@@ -257,32 +289,5 @@
     <!-- Footer End -->
 
     <script src="script.js"></script>
-    // formsubmision
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const scriptURL =
-          "https://script.google.com/macros/s/AKfycbyTEOYswkhbarAtTH4VVWJ3v34JQJzSY9I-n-0cuOjtaoEyZUE9OGHF0tFnBcBs-tT-rA/exec";
-        const form = document.forms["fozone-contact-form"];
-        const submitButton = document.getElementById("submit-button");
-
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          submitButton.classList.add("loading");
-          fetch(scriptURL, { method: "POST", body: new FormData(form) })
-            .then((response) => {
-              submitButton.classList.remove("loading");
-              alert("Form successfully submitted!");
-              form.reset();
-            })
-            .catch((error) => {
-              submitButton.classList.remove("loading");
-              alert(
-                "There was an error submitting the form. Please try again."
-              );
-              console.error("Error!", error.message);
-            });
-        });
-      });
-    </script>
   </body>
 </html>

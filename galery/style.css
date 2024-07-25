@@ -1,56 +1,103 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(to bottom right,#ffffff,#adbaf0);
 }
+
+body {
+  background: linear-gradient(to bottom right, #ffffff, #adbaf0);
+}
+
 .container {
-  width: 800px;
-  margin: 20px auto;
+  width: 1300px;
   columns: 4;
-  column-gap: 20px
+  margin: 20px auto;
+  gap: 1.5rem;
+  position: relative;
 }
 .container .box {
-  width: 100%;
   margin-bottom: 10px;
   break-inside: avoid;
+  position: relative; /* Tambahkan ini */
+  overflow: hidden;
+  border-radius: 2rem;
 }
 .container .box img {
   max-width: 100%;
   width: 100%;
-  border-radius: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  transition: transform 0.3s ease;
   object-fit: cover;
+  border-radius: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.container .box .download-btn {
+  position: absolute;
+  bottom: 2vw; /* Sesuaikan jarak dari bawah */
+  right: 2vw; /* Sesuaikan jarak dari kanan */
+  padding: 0.5vw 1vw; /* Responsif padding */
+  background-color: #5670d0; /* Updated to match theme */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.container .box:hover .download-btn {
+  opacity: 1;
+}
+
+.container .box .download-btn:hover {
+  background-color: #3b50a0; /* Darker blue for hover effect */
 }
 
 .container .box img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   border-radius: 2rem;
 }
-@media (max-width: 1200px)
-{
+
+@media (max-width: 1200px) {
   .container {
-    width: calc(100%-40px);
+    width: 96.5%;
     columns: 3;
-
   }
 }
-@media (max-width: 768px)
-{
+@media (max-width: 768px) {
   .container {
+    width: 94.5%;
     columns: 2;
+  }
 
+  .container .box .download-btn:hover {
+    background-color: #3b50a0; /* Darker blue for hover effect */
+    bottom: 10px;
+    right: 10px;
   }
 }
-@media screen (max-width: 476px)
-{
+@media (max-width: 476px) {
   .container {
+    width: 91%;
     columns: 1;
+  }
 
+  .container .box .download-btn {
+    bottom: 5vw; /* Sesuaikan jarak dari bawah */
+    right: 5vw; /* Sesuaikan jarak dari kanan */
+    padding: 2vw 3vw; /* Responsif padding */
+    font-size: 2vw; /* Responsif font size */
+  }
+
+  .container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container .box img {
+    width: 90%;
   }
 }
-
-
-

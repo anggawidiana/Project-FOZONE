@@ -50,7 +50,7 @@ main .hidden.show {
   padding: 1rem;
   width: 80%;
   position: sticky;
-  top: 0;
+  top: 1rem;
   left: 0;
   right: 0;
   z-index: 9999;
@@ -385,6 +385,11 @@ main .container .image img {
   }
 }
 
+/* disqus */
+.disqus_thread {
+  margin: 0 90%;
+}
+
 @media (max-width: 500px) {
   .contact-form {
     width: 90%;
@@ -498,7 +503,7 @@ footer .footer-logo img:hover {
   .navbar {
     padding: 1rem;
     gap: 2rem;
-    height: 6rem;
+    height: 5rem;
   }
 
   #check:checked ~ .icons #menu-icon {
