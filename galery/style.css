@@ -20,15 +20,30 @@ body {
   display: none; /* Hidden by default */
 }
 
+body {
+  position: relative; /* Ensure the body is positioned relatively */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 98; /* Behind the welcome-page but above the rest of the content */
+  display: none; /* Hidden by default */
+}
+
 .welcome-page {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  padding-left: 1.5rem;
-  width: 40%;
+  width: 60%;
+  max-width: 800px;
+  height: auto;
   background: linear-gradient(135deg, #5670d0, #8fa2f7);
-  position: fixed;
+  position: fixed; /* Fixed position so it stays in view */
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
@@ -45,13 +60,12 @@ body {
   margin: 0;
   font-size: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-left: 4.7rem;
 }
 
 .welcome-page img {
-  width: 100%;
+  width: 60%;
   height: 100%;
-  object-fit: cover;
-  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -59,10 +73,11 @@ body {
 
 #close-icon {
   position: absolute;
-  top: 2%;
-  right: 2%;
+  top: 10px; /* Adjust the position as needed */
+  right: 10px; /* Center relative to image */
   font-size: 2rem;
   cursor: pointer;
+  color: black;
 }
 
 @keyframes fadeIn {
@@ -90,6 +105,10 @@ body {
 }
 
 .overlay.fadeOut {
+  animation: fadeOut 1s ease-out;
+}
+
+.welcome-page.fadeOut {
   animation: fadeOut 1s ease-out;
 }
 
@@ -166,14 +185,14 @@ body {
 @media (max-width: 476px) {
   .welcome-page {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    padding-left: 1.5rem;
     width: 80%;
+
+    height: auto;
     background: linear-gradient(135deg, #5670d0, #8fa2f7);
-    position: fixed;
-    top: 10%;
+    position: fixed; /* Fixed position so it stays in view */
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99;
@@ -189,13 +208,12 @@ body {
     margin: 0;
     font-size: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-left: 2.1rem;
   }
 
   .welcome-page img {
-    width: 100%;
+    width: 60%;
     height: 100%;
-    object-fit: cover;
-    position: relative;
     top: 0;
     right: 0;
     bottom: 0;
@@ -203,8 +221,8 @@ body {
 
   #close-icon {
     position: absolute;
-    top: 2%;
-    right: 2%;
+    top: 10px; /* Adjust the position as needed */
+    right: 10px; /* Center relative to image */
     font-size: 1rem;
     cursor: pointer;
     color: black;
@@ -237,51 +255,6 @@ body {
 }
 
 @media (max-width: 376px) {
-  .welcome-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding-left: 1.5rem;
-    width: 80%;
-    background: linear-gradient(135deg, #5670d0, #8fa2f7);
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 99;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    animation: fadeIn 1s ease-out;
-  }
-
-  .welcome-page h1 {
-    margin: 0;
-    font-size: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  }
-
-  .welcome-page img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  #close-icon {
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    font-size: 1rem;
-    cursor: pointer;
-    color: black;
-  }
 }
 
 #preloader {
