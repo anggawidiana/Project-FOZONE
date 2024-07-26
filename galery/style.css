@@ -9,10 +9,10 @@ body {
 }
 
 .container {
-  width: 1300px;
+  width: 90%;
   columns: 4;
   margin: 20px auto;
-  gap: 1.5rem;
+  column-gap: 26.5px;
   position: relative;
 }
 .container .box {
@@ -20,7 +20,6 @@ body {
   break-inside: avoid;
   position: relative; /* Tambahkan ini */
   overflow: hidden;
-  border-radius: 2rem;
 }
 .container .box img {
   max-width: 100%;
@@ -28,7 +27,6 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   object-fit: cover;
-  border-radius: 2rem;
   display: block;
   margin-bottom: 1rem;
 }
@@ -56,7 +54,6 @@ body {
 
 .container .box img:hover {
   transform: scale(1.05);
-  border-radius: 2rem;
 }
 
 @media (max-width: 1200px) {
@@ -79,8 +76,9 @@ body {
 }
 @media (max-width: 476px) {
   .container {
-    width: 91%;
-    columns: 1;
+    width: 94%;
+    columns: 2;
+    column-gap: 1px;
   }
 
   .container .box .download-btn {
@@ -99,6 +97,7 @@ body {
 
   .container .box img {
     width: 90%;
+    margin-bottom: 0.7rem;
   }
 }
 
