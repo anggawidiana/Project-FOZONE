@@ -9,7 +9,7 @@
     <title>Gallery</title>
     <link
       rel="stylesheet"
-      href="style.css"
+      href="css/style.css"
     />
 
     <script
@@ -25,6 +25,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="css/lightbox.css"
+    />
   </head>
   <body>
     <div id="preloader"></div>
@@ -33,7 +38,7 @@
     <div class="welcome-page">
       <h1>Welcome!</h1>
       <img
-        src="Screenshot_2024-06-24_220456-transformed.png"
+        src="images/Screenshot_2024-06-24_220456-transformed.png"
         alt=""
       />
       <i
@@ -44,167 +49,271 @@
     <!-- Your other content here -->
 
     <div class="container">
-      <div class="box">
-        <img src="foto 1.jpg" />
-        <a
-          href="foto 1.jpg"
-          download="foto 1.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="foto ke 2.jpg" />
-        <a
-          href="foto ke 2.jpg"
-          download="foto ke 2.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="foto ke 3.jpg" />
-        <a
-          href="foto ke 3.jpg"
-          download="foto ke 3.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="foto ke 4.jpg" />
-        <a
-          href="foto ke 4.jpg"
-          download="foto ke 4.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="foto ke5.jpg" />
-        <a
-          href="foto ke5.jpg"
-          download="foto ke5.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="foto ke6.jpg" />
-        <a
-          href="foto ke6.jpg"
-          download="foto ke6.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="foto ke 7.jpg" />
-        <a
-          href="foto ke 7.jpg"
-          download="foto ke 7.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="8.jpg" />
-        <a
-          href="8.jpg"
-          download="8.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="9.jpg" />
-        <a
-          href="9.jpg"
-          download="9.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="10.jpg" />
-        <a
-          href="10.jpg"
-          download="10.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="11.jpg" />
-        <a
-          href="11.jpg"
-          download="11.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="12.jpg" />
-        <a
-          href="12.jpg"
-          download="12.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="13.jpg" />
-        <a
-          href="13.jpg"
-          download="13.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="14.jpg" />
-        <a
-          href="14.jpg"
-          download="14.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="15.jpg" />
-        <a
-          href="15.jpg"
-          download="15.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
-      <div class="box">
-        <img src="16.jpg" />
-        <a
-          href="16.jpg"
-          download="16.jpg"
-          class="download-btn"
-        >
-          <i class="fa-solid fa-download"></i>
-        </a>
-      </div>
+      <a
+        href="images/foto 1.jpg"
+        data-lightbox="models"
+        data-title="Caption1"
+      >
+        <div class="box">
+          <img src="images/foto 1.jpg" />
+          <a
+            href="images/foto 1.jpg"
+            download="images/foto 1.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+
+      <a
+        href="images/foto ke 2.jpg"
+        data-lightbox="models"
+        data-title="Caption2"
+      >
+        <div class="box">
+          <img src="images/foto ke 2.jpg" />
+          <a
+            href="images/foto ke 2.jpg"
+            download="images/foto ke 2.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+
+      <a
+        href="images/foto ke 3.jpg"
+        data-lightbox="models"
+        data-title="Caption3"
+      >
+        <div class="box">
+          <img src="images/foto ke 3.jpg" />
+          <a
+            href="images/foto ke 3.jpg"
+            download="images/foto ke 3.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+
+      <a
+        href="images/foto ke 4.jpg"
+        data-lightbox="models"
+        data-title="Caption4"
+      >
+        <div class="box">
+          <img src="images/foto ke 4.jpg" />
+          <a
+            href="images/foto ke 4.jpg"
+            download="images/foto ke 4.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+
+      <a
+        href="images/foto ke5.jpg"
+        data-lightbox="models"
+        data-title="Caption5"
+      >
+        <div class="box">
+          <img src="images/foto ke5.jpg" />
+          <a
+            href="images/foto ke5.jpg"
+            download="images/foto ke5.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+
+      <a
+        href="images/foto ke6.jpg"
+        data-lightbox="models"
+        data-title="Caption6"
+      >
+        <div class="box">
+          <img src="images/foto ke6.jpg" />
+          <a
+            href="images/foto ke6.jpg"
+            download="images/foto ke6.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+
+      <a
+        href="images/foto ke 7.jpg"
+        data-lightbox="models"
+        data-title="Caption7"
+      >
+        <div class="box">
+          <img src="images/foto ke 7.jpg" />
+          <a
+            href="images/foto ke 7.jpg"
+            download="images/foto ke 7.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+
+      <a
+        href="images/8.jpg"
+        data-lightbox="models"
+        data-title="Caption8"
+      >
+        <div class="box">
+          <img src="images/8.jpg" />
+          <a
+            href="images/8.jpg"
+            download="images/8.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+      <a
+        href="images/9.jpg"
+        data-lightbox="models"
+        data-title="Caption9"
+      >
+        <div class="box">
+          <img src="images/9.jpg" />
+          <a
+            href="images/9.jpg"
+            download="images/9.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+      <a
+        href="images/10.jpg"
+        data-lightbox="models"
+        data-title="Caption10"
+      >
+        <div class="box">
+          <img src="images/10.jpg" />
+          <a
+            href="images/10.jpg"
+            download="images/10.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+      <a
+        href="images/11.jpg"
+        data-lightbox="models"
+        data-title="Caption11"
+      >
+        <div class="box">
+          <img src="images/11.jpg" />
+          <a
+            href="images/11.jpg"
+            download="images/11.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+      <a
+        href="images/12.jpg"
+        data-lightbox="models"
+        data-title="Caption12"
+      >
+        <div class="box">
+          <img src="images/12.jpg" />
+          <a
+            href="images/12.jpg"
+            download="images/12.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+      <a
+        href="images/13.jpg"
+        data-lightbox="models"
+        data-title="Caption13"
+      >
+        <div class="box">
+          <img src="images/13.jpg" />
+          <a
+            href="images/13.jpg"
+            download="images/13.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+      <a
+        href="images/14.jpg"
+        data-lightbox="models"
+        data-title="Caption14"
+      >
+        <div class="box">
+          <img src="images/14.jpg" />
+          <a
+            href="images/14.jpg"
+            download="1image/4.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+      <a
+        href="images/15.jpg"
+        data-lightbox="models"
+        data-title="Caption15"
+      >
+        <div class="box">
+          <img src="images/15.jpg" />
+          <a
+            href="images/15.jpg"
+            download="images/15.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
+      <a
+        href="images/16.jpg"
+        data-lightbox="models"
+        data-title="Caption16"
+      >
+        <div class="box">
+          <img src="images/16.jpg" />
+          <a
+            href="images/16.jpg"
+            download="images/16.jpg"
+            class="download-btn"
+          >
+            <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </a>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lightbox-plus-jquery.js"></script>
   </body>
 </html>
