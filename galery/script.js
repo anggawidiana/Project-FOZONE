@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         loader.style.display = "none"; // Sembunyikan preloader setelah efek fade-out
       }, 500); // Waktu delay untuk efek fade-out
-    }, 3000); // Waktu tampil preloader
+    }, 2000); // Waktu tampil preloader
   });
 });
