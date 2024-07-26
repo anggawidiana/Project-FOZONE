@@ -188,7 +188,6 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 80%;
-
     height: auto;
     background: linear-gradient(135deg, #5670d0, #8fa2f7);
     position: fixed; /* Fixed position so it stays in view */
@@ -200,15 +199,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #fff;
     font-family: "Poppins", sans-serif;
-    text-align: center;
     animation: fadeIn 1s ease-out;
   }
 
   .welcome-page h1 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 80%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    margin-left: 9%;
+    margin: 0 auto;
   }
 
   .welcome-page img {
