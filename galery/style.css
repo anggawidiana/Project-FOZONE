@@ -6,16 +6,29 @@
 
 body {
   background: linear-gradient(to bottom right, #ffffff, #adbaf0);
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  z-index: 98; /* Behind the welcome-page but above the rest of the content */
+  display: none; /* Hidden by default */
 }
 
 .welcome-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  padding: 1.5rem;
+  gap: 2rem;
+  padding-left: 1.5rem;
+  width: 40%;
   background: linear-gradient(135deg, #5670d0, #8fa2f7);
-  position: absolute;
+  position: fixed;
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
@@ -32,6 +45,24 @@ body {
   margin: 0;
   font-size: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.welcome-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#close-icon {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -52,6 +83,14 @@ body {
   to {
     opacity: 0;
   }
+}
+
+.overlay.fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+.overlay.fadeOut {
+  animation: fadeOut 1s ease-out;
 }
 
 .welcome-page h1 {
@@ -125,6 +164,52 @@ body {
   }
 }
 @media (max-width: 476px) {
+  .welcome-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 1.5rem;
+    width: 80%;
+    background: linear-gradient(135deg, #5670d0, #8fa2f7);
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+  }
+
+  .welcome-page h1 {
+    margin: 0;
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .welcome-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  #close-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 1rem;
+    cursor: pointer;
+    color: black;
+  }
+
   .container {
     width: 94%;
     columns: 2;

@@ -14,12 +14,42 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const welcome = document.querySelector(".welcome-page");
+  const welcomePage = document.querySelector(".welcome-page");
+  const overlay = document.querySelector(".overlay");
+  const closeIcon = document.getElementById("close-icon");
 
-  setTimeout(function () {
-    welcome.style.animation = "fadeOut 1s ease-out";
+  // Show overlay and welcome page
+  function showWelcomePage() {
+    overlay.style.display = "block";
+    welcomePage.style.display = "flex";
+    overlay.classList.add("fadeIn");
+    welcomePage.classList.add("fadeIn");
+  }
+
+  // Hide overlay and welcome page
+  function hideWelcomePage() {
+    welcomePage.classList.remove("fadeIn");
+    overlay.classList.remove("fadeIn");
+    welcomePage.classList.add("fadeOut");
+    overlay.classList.add("fadeOut");
     setTimeout(function () {
-      welcome.style.display = "none";
-    }, 1000); // Match the fadeOut animation duration
-  }, 6000); // Duration before the welcome message starts to disappear
+      welcomePage.style.display = "none";
+      overlay.style.display = "none";
+      overlay.classList.remove("fadeOut");
+      welcomePage.classList.remove("fadeOut");
+    }); // Match the fadeOut animation duration
+  }
+
+  // Automatically hide the welcome page after 2 seconds
+  setTimeout(function () {
+    hideWelcomePage();
+  }, 20000);
+
+  // Add event listener to close icon
+  closeIcon.addEventListener("click", function () {
+    hideWelcomePage();
+  });
+
+  // Initially show the welcome page and overlay
+  showWelcomePage();
 });
