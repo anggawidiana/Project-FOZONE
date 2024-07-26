@@ -8,6 +8,56 @@ body {
   background: linear-gradient(to bottom right, #ffffff, #adbaf0);
 }
 
+.welcome-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #5670d0, #8fa2f7);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.welcome-page h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.welcome-page h1 {
+  color: #fff;
+}
+
 .container {
   width: 90%;
   columns: 4;

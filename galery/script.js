@@ -12,3 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000); // Waktu tampil preloader
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const welcome = document.querySelector(".welcome-page");
+
+  setTimeout(function () {
+    welcome.style.animation = "fadeOut 1s ease-out";
+    setTimeout(function () {
+      welcome.style.display = "none";
+    }, 1000); // Match the fadeOut animation duration
+  }, 6000); // Duration before the welcome message starts to disappear
+});
