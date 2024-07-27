@@ -185,9 +185,9 @@ body.lb-disable-scrolling {
 .lb-data .lb-close {
   display: block;
   float: right;
-  width: 20px;
-  height: 20px;
-  background: url(../images/close.png) top right no-repeat;
+  width: 30px;
+  height: 30px;
+  background: url(../images/closeicon.png) top right no-repeat;
   text-align: right;
   outline: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
