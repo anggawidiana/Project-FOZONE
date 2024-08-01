@@ -1,3 +1,8 @@
+let song = document.getElementById("song");
+song.volume = 0.5;
+let video = document.getElementById("video");
+video.volume = 0.4;
+
 const loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   setTimeout(function () {

@@ -32,6 +32,16 @@
     />
   </head>
   <body>
+    <audio
+      id="song"
+      autoplay
+    >
+      <source
+        src="Alphaville - Forever Young ~Official Video.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
     <div id="preloader"></div>
 
     <div class="overlay"></div>
@@ -50,7 +60,10 @@
 
     <div class="container">
       <div class="box">
-        <video controls>
+        <video
+          controls
+          id="video"
+        >
           <source
             src="vid1.mp4"
             type="video/mp4"
@@ -59,7 +72,10 @@
         </video>
       </div>
       <div class="box">
-        <video controls>
+        <video
+          controls
+          id="video"
+        >
           <source
             src="vid2.mp4"
             type="video/mp4"
