@@ -131,6 +131,12 @@ body {
   position: relative; /* Tambahkan ini */
   overflow: hidden;
 }
+
+.container .box video {
+  width: 280px;
+  height: 480px;
+}
+
 .container .box img {
   max-width: 100%;
   width: 100%;
@@ -178,6 +184,11 @@ body {
     columns: 2;
   }
 
+  .container .box video {
+    width: auto;
+    height: 480px;
+  }
+
   .container .box .download-btn:hover {
     background-color: #3b50a0; /* Darker blue for hover effect */
     bottom: 10px;
@@ -202,6 +213,11 @@ body {
     color: #fff;
     font-family: "Poppins", sans-serif;
     animation: fadeIn 1s ease-out;
+  }
+
+  .container .box video {
+    width: 100%;
+    height: 300px;
   }
 
   .welcome-page h1 {
